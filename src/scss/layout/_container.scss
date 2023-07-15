@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.container {
+  padding-inline: 55px;
+
+  @include media(768) {
+    padding-inline: 48px;
+  }
+
+  @include media(375) {
+    padding-inline: 24px;
+  }
+}
