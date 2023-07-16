@@ -1,5 +1,25 @@
 @mixin media($width, $type: max) {
-  @media (#{$type}-width: #{$width}px) {
+  @if ($type == min) {
+    @media (#{$type}-width: #{$width + 0.02}px) {
+      @content;
+    }
+  } @else {
+    @media (#{$type}-width: #{$width}px) {
+      @content;
+    }
+  }
+}
+
+@mixin media-combine($from, $to) {
+  @media (min-width: #{$from + 0.02}px) and (max-width: #{$to}px) {
     @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
   }
 }
