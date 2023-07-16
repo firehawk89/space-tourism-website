@@ -13,6 +13,7 @@ const tt2woff2 = require("gulp-ttf2woff2");
 const del = require("del");
 const plumber = require("gulp-plumber");
 const notifier = require("gulp-notifier");
+const ghPages = require("gulp-gh-pages");
 
 const buildPath = "./build";
 const srcPath = "./src";
@@ -47,6 +48,7 @@ const path = {
     img: `!${buildPath}/img`,
     fonts: `!${buildPath}/fonts`,
   },
+  deploy: `${buildPath}/**/*`,
 };
 
 function sync() {
@@ -130,6 +132,10 @@ function cleanDest() {
   return del([path.clean, path.ignore.img, path.ignore.fonts]);
 }
 
+function deploy() {
+  return src(path.deploy).pipe(ghPages());
+}
+
 function watcher() {
   watch([path.watch.html], htmlTask);
   watch([path.watch.scss], scssTask);
@@ -151,3 +157,4 @@ const tasks = parallel(
 const dev = series(cleanDest, tasks, parallel(watcher, sync));
 
 exports.default = dev;
+exports.deploy = deploy;
