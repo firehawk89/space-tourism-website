@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body>
+    <div class="page-background">
+      <picture>
+        <source
+          srcset="./img/home/background-home-desktop.webp"
+          media="(min-width: 768.02px)"
+          type="image/webp"
+        />
+        <source
+          srcset="./img/home/background-home-desktop.jpg"
+          media="(min-width: 768.02px)"
+          type="image/jpg"
+        />
+        <source
+          srcset="./img/home/background-home-tablet.webp"
+          media="(min-width: 375.02px)"
+          type="image/webp"
+        />
+        <source
+          srcset="./img/home/background-home-tablet.jpg"
+          media="(min-width: 375.02px)"
+          type="image/jpg"
+        />
+        <source
+          srcset="./img/home/background-home-mobile.webp"
+          type="image/webp"
+        />
+        <img src="./img/home/background-home-mobile.jpg" alt="Space" />
+      </picture>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="container">
@@ -18,6 +47,9 @@
                 alt="Frontend Mentor | Space tourism"
               />
             </a>
+            <button class="nav-toggler">
+              <span></span>
+            </button>
             <nav class="header__nav">
               <ul class="header__menu menu">
                 <li class="menu__item">
@@ -48,5 +80,6 @@
       </main>
       <footer class="footer">footer</footer>
     </div>
+    <script src="./js/index.min.js"></script>
   </body>
 </html>
