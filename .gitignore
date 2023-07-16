@@ -21,3 +21,6 @@ package-lock.json
 
 # Avoid upload of destination folder (build)
 build
+
+# Avoid upload of deploy folder
+.publish
