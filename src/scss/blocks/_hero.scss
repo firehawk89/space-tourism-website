@@ -1,0 +1,114 @@
+@use "../abstracts" as *;
+
+.hero {
+  height: 100%;
+  padding-bottom: 130px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @include media-combine(1024, 1440) {
+    padding-right: 87px;
+  }
+
+  @include media(1024) {
+    padding: 106px 0px 90px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media(640) {
+    padding: 24px 0px 48px;
+  }
+
+  &__content {
+    flex: 0 1 40.5%;
+    color: #d0d6f9;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include media(1024) {
+      max-width: 450px;
+      align-items: center;
+      text-align: center;
+    }
+
+    @include media(640) {
+      gap: 16px;
+    }
+  }
+
+  &__subheading {
+    font-family: "Barlow Condensed";
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 4.725px;
+
+    @include media(768) {
+      font-size: 20px;
+      letter-spacing: 3.375px;
+    }
+
+    @include media(640) {
+      font-size: 16px;
+      letter-spacing: 2.7px;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    text-transform: uppercase;
+
+    @include media(640) {
+      font-size: 80px;
+      line-height: 100px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    width: 274px;
+    height: 274px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bellefair", serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $clr-dark;
+    background-color: $clr-light;
+    border-radius: 50%;
+
+    @include media(1024) {
+      width: 242px;
+      height: 242px;
+    }
+
+    @include media(640) {
+      width: 150px;
+      height: 150px;
+      font-size: 20px;
+      letter-spacing: 1.25px;
+    }
+
+    @include hover {
+      &::before {
+        transform: scale(1.6);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $clr-light, $alpha: 0.1);
+      border-radius: inherit;
+      transition: all 0.3s ease;
+    }
+  }
+}
