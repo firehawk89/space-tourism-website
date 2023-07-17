@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 .container {
+  height: 100%;
   padding-inline: 55px;
 
   @include media(768) {
