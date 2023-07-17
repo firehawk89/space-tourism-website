@@ -12,7 +12,10 @@
 
 html,
 body {
+  min-height: 100vh;
+  min-height: 100svh;
   height: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -42,12 +45,19 @@ body {
   letter-spacing: 0px;
   color: #fff;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
 
 h1,
 h2,
 h3,
 h4 {
   font-family: "Bellefair", serif;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -72,6 +82,152 @@ h5 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
   letter-spacing: 4.725px;
+}
+
+.hero {
+  height: 100%;
+  padding-bottom: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (min-width: 1024.02px) and (max-width: 1440px) {
+  .hero {
+    padding-right: 87px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    padding: 106px 0px 90px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  .hero {
+    padding: 24px 0px 48px;
+  }
+}
+.hero__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40.5%;
+          flex: 0 1 40.5%;
+  color: #d0d6f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .hero__content {
+    max-width: 450px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 640px) {
+  .hero__content {
+    gap: 16px;
+  }
+}
+.hero__subheading {
+  font-family: "Barlow Condensed";
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4.725px;
+}
+@media (max-width: 768px) {
+  .hero__subheading {
+    font-size: 20px;
+    letter-spacing: 3.375px;
+  }
+}
+@media (max-width: 640px) {
+  .hero__subheading {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+}
+.hero__heading {
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 640px) {
+  .hero__heading {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+.hero__link {
+  position: relative;
+  width: 274px;
+  height: 274px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0b0d17;
+  background-color: #fff;
+  border-radius: 50%;
+}
+@media (max-width: 1024px) {
+  .hero__link {
+    width: 242px;
+    height: 242px;
+  }
+}
+@media (max-width: 640px) {
+  .hero__link {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+  }
+}
+@media (hover: hover) {
+  .hero__link:hover::before {
+    -webkit-transform: scale(1.6);
+        -ms-transform: scale(1.6);
+            transform: scale(1.6);
+  }
+}
+.hero__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -103,6 +259,7 @@ body.is-locked {
 }
 
 .container {
+  height: 100%;
   padding-inline: 55px;
 }
 @media (max-width: 768px) {
@@ -300,6 +457,7 @@ body.is-locked {
   }
 }
 .menu__item {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,4 +506,9 @@ body.is-locked {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+@media (min-width: 1440.02px) {
+  .main {
+    padding-inline: 117px;
+  }
 }
