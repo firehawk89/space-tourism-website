@@ -18,7 +18,14 @@
   }
 
   &__item {
-    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    @include hover {
+      box-shadow: inset 0px -3px 0px 0px rgba($color: $clr-light, $alpha: 0.5);
+    }
+  }
+
+  &__link {
     display: flex;
     align-items: center;
     gap: 14px;
@@ -26,15 +33,6 @@
     text-transform: uppercase;
     letter-spacing: 2.7px;
     color: $clr-light;
-    transition: all 0.3s ease-out;
-
-    @include hover {
-      box-shadow: inset 0px -3px 0px 0px rgba($color: $clr-light, $alpha: 0.5);
-    }
-
-    @include media(640) {
-      gap: 11px;
-    }
 
     &::before {
       counter-increment: menu-item;
@@ -45,13 +43,13 @@
         display: none;
       }
     }
-  }
-
-  &__link {
-    color: inherit;
 
     @include media(640, min) {
       padding: 38px 0px;
+    }
+
+    @include media(640) {
+      gap: 11px;
     }
   }
 }
