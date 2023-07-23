@@ -19,6 +19,7 @@
 
   @include media(640) {
     padding: 24px 0px 48px;
+    gap: 20px;
   }
 
   &__content {
