@@ -237,12 +237,40 @@ h5 {
 .destination {
   padding: 76px 0px 112px;
 }
+@media (max-width: 1024px) {
+  .destination {
+    padding: 76px 0px;
+  }
+}
+@media (max-width: 768px) {
+  .destination {
+    padding: 40px 0px 62px;
+  }
+}
+@media (max-width: 640px) {
+  .destination {
+    padding: 24px 0px 57px;
+  }
+}
 .destination__heading {
   font-family: "Barlow Condensed";
   font-size: 28px;
   line-height: normal;
   letter-spacing: 4.725px;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .destination__heading {
+    font-size: 20px;
+    letter-spacing: 3.375px;
+  }
+}
+@media (max-width: 640px) {
+  .destination__heading {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
 }
 .destination__heading::before {
   margin-right: 28px;
@@ -256,6 +284,25 @@ h5 {
   display: flex;
   gap: 94px;
 }
+@media (max-width: 1024px) {
+  .destination__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .destination__content {
+    margin-top: 60px;
+    gap: 53px;
+  }
+}
+@media (max-width: 640px) {
+  .destination__content {
+    gap: 26px;
+  }
+}
 .destination__img-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -264,11 +311,26 @@ h5 {
 .destination__img-container img {
   margin-inline: auto;
 }
+@media (max-width: 768px) {
+  .destination__img-container img {
+    max-width: 300px;
+  }
+}
+@media (max-width: 640px) {
+  .destination__img-container img {
+    max-width: 170px;
+  }
+}
 .destination__text {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40%;
           flex: 0 1 40%;
   color: #d0d6f9;
+}
+@media (max-width: 1024px) {
+  .destination__text {
+    text-align: center;
+  }
 }
 .destination__list {
   display: -webkit-box;
@@ -278,6 +340,13 @@ h5 {
       -ms-flex-align: center;
           align-items: center;
   gap: 36px;
+}
+@media (max-width: 1024px) {
+  .destination__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .destination__list-item {
   position: relative;
@@ -308,13 +377,41 @@ h5 {
     opacity: 1;
   }
 }
-.destination__info-heading {
+.destination__info {
   margin-top: 37px;
+}
+@media (max-width: 768px) {
+  .destination__info {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .destination__info {
+    margin-top: 20px;
+  }
+}
+.destination__info-heading {
   text-transform: uppercase;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .destination__info-heading {
+    font-size: 80px;
+    line-height: normal;
+  }
+}
 .destination__info-text {
   margin-top: 14px;
+}
+@media (max-width: 768px) {
+  .destination__info-text {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 640px) {
+  .destination__info-text {
+    margin-top: 1px;
+  }
 }
 .destination__characteristics {
   margin-top: 54px;
@@ -328,6 +425,29 @@ h5 {
      -moz-column-gap: 79px;
           column-gap: 79px;
   border-top: 1px solid #383b4b;
+}
+@media (max-width: 1024px) {
+  .destination__characteristics {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .destination__characteristics {
+    margin-top: 49px;
+  }
+}
+@media (max-width: 640px) {
+  .destination__characteristics {
+    margin-top: 32px;
+    padding-top: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 32px;
+  }
 }
 .destination__characteristic {
   text-transform: uppercase;
@@ -400,24 +520,27 @@ body.is-locked {
 }
 
 .header {
+  --header-padding-top: 40px;
+  padding-top: var(--header-padding-top);
   position: relative;
 }
-@media (min-width: 768.02px) {
+@media (min-width: 640.02px) and (max-width: 768px) {
   .header {
-    padding-top: 40px;
+    padding-top: 0px;
   }
 }
 @media (max-width: 640px) {
   .header {
-    padding-top: 24px;
+    --header-padding-top: 24px;
   }
 }
 .header::before {
   display: none;
   content: "";
   position: absolute;
-  top: 50%;
+  top: calc(50% + var(--header-padding-top));
   left: 11.6%;
+  translate: 0px calc(0px - var(--header-padding-top) / 2);
   z-index: 1;
   width: 32.85%;
   height: 1px;
