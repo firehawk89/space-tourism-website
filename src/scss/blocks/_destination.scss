@@ -3,12 +3,35 @@
 .destination {
   padding: 76px 0px 112px;
 
+  @include media(1024) {
+    padding: 76px 0px;
+  }
+
+  @include media(768) {
+    padding: 40px 0px 62px;
+  }
+
+  @include media(640) {
+    padding: 24px 0px 57px;
+  }
+
   &__heading {
     font-family: "Barlow Condensed";
     font-size: 28px;
     line-height: normal;
     letter-spacing: 4.725px;
     text-transform: uppercase;
+
+    @include media(768) {
+      font-size: 20px;
+      letter-spacing: 3.375px;
+    }
+
+    @include media(640) {
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 2.7px;
+    }
 
     &::before {
       margin-right: 28px;
@@ -21,6 +44,19 @@
     margin-top: 64px;
     display: flex;
     gap: 94px;
+
+    @include media(1024) {
+      flex-direction: column;
+    }
+
+    @include media(768) {
+      margin-top: 60px;
+      gap: 53px;
+    }
+
+    @include media(640) {
+      gap: 26px;
+    }
   }
 
   &__img-container {
@@ -28,18 +64,34 @@
 
     img {
       margin-inline: auto;
+
+      @include media(768) {
+        max-width: 300px;
+      }
+
+      @include media(640) {
+        max-width: 170px;
+      }
     }
   }
 
   &__text {
     flex: 0 1 40%;
     color: $clr-accent;
+
+    @include media(1024) {
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
     gap: 36px;
+
+    @include media(1024) {
+      justify-content: center;
+    }
   }
 
   &__list-item {
@@ -74,16 +126,37 @@
   }
 
   &__info {
+    margin-top: 37px;
+
+    @include media(768) {
+      margin-top: 32px;
+    }
+
+    @include media(640) {
+      margin-top: 20px;
+    }
   }
 
   &__info-heading {
-    margin-top: 37px;
     text-transform: uppercase;
     color: $clr-light;
+
+    @include media(768) {
+      font-size: 80px;
+      line-height: normal;
+    }
   }
 
   &__info-text {
     margin-top: 14px;
+
+    @include media(768) {
+      margin-top: 8px;
+    }
+
+    @include media(640) {
+      margin-top: 1px;
+    }
   }
 
   &__characteristics {
@@ -93,6 +166,21 @@
     flex-wrap: wrap;
     column-gap: 79px;
     border-top: 1px solid $clr-gray;
+
+    @include media(1024) {
+      justify-content: center;
+    }
+
+    @include media(768) {
+      margin-top: 49px;
+    }
+
+    @include media(640) {
+      margin-top: 32px;
+      padding-top: 32px;
+      flex-direction: column;
+      gap: 32px;
+    }
   }
 
   &__characteristic {
