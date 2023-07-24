@@ -4,11 +4,11 @@
   position: relative;
 
   @include media(768, min) {
-    padding: 40px 0px;
+    padding-top: 40px;
   }
 
   @include media(640) {
-    padding: 24px 0px;
+    padding-top: 24px;
   }
 
   &::before {
@@ -118,6 +118,7 @@
 
     @include media(640) {
       position: fixed;
+      z-index: 10;
       inset: 0 0 0 33%;
       padding: min(25vh, 118px) 32px 0px;
       transform: translateX(100%);
