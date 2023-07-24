@@ -1,22 +1,25 @@
 @use "../abstracts/" as *;
 
 .header {
+  --header-padding-top: 40px;
+  padding-top: var(--header-padding-top);
   position: relative;
 
-  @include media(768, min) {
-    padding-top: 40px;
+  @include media-combine(640, 768) {
+    padding-top: 0px;
   }
 
   @include media(640) {
-    padding-top: 24px;
+    --header-padding-top: 24px;
   }
 
   &::before {
     display: none;
     content: "";
     position: absolute;
-    top: 50%;
+    top: calc(50% + var(--header-padding-top));
     left: 11.6%;
+    translate: 0px calc(0px - var(--header-padding-top) / 2);
     z-index: 1;
     width: 32.85%;
     height: 1px;
