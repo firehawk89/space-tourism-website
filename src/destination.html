@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    <title>Frontend Mentor | Space tourism website</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
+    <div class="page-background">
+      <picture>
+        <source
+          srcset="./img/destination/background-destination-desktop.webp"
+          media="(min-width: 768.02px)"
+          type="image/webp"
+        />
+        <source
+          srcset="./img/destination/background-destination-desktop.jpg"
+          media="(min-width: 768.02px)"
+          type="image/jpg"
+        />
+        <source
+          srcset="./img/destination/background-destination-tablet.webp"
+          media="(min-width: 375.02px)"
+          type="image/webp"
+        />
+        <source
+          srcset="./img/destination/background-destination-tablet.jpg"
+          media="(min-width: 375.02px)"
+          type="image/jpg"
+        />
+        <source
+          srcset="./img/destination/background-destination-mobile.webp"
+          type="image/webp"
+        />
+        <img
+          src="./img/destination/background-destination-mobile.jpg"
+          alt="Space"
+        />
+      </picture>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__body">
+            <div class="logo">
+              <img
+                src="./img/shared/logo.svg"
+                alt="Frontend Mentor | Space tourism"
+              />
+            </div>
+            <button class="nav-toggler">
+              <span></span>
+            </button>
+            <nav class="header__nav">
+              <ul class="header__menu menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="index.html">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="destination.html">Destination</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">Crew</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">Technology</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <section class="destination">
+            <h1 class="destination__heading">Pick your destination</h1>
+            <div class="destination__content">
+              <div class="destination__img-container">
+                <picture>
+                  <source
+                    srcset="./img/destination/image-moon.webp"
+                    type="image/webp"
+                  />
+                  <img src="./img/destination/image-moon.png" alt="Moon" />
+                </picture>
+              </div>
+              <div class="destination__text">
+                <ul class="destination__list">
+                  <li class="destination__list-item">Moon</li>
+                  <li class="destination__list-item">Mars</li>
+                  <li class="destination__list-item">Europa</li>
+                  <li class="destination__list-item">Titan</li>
+                </ul>
+                <div class="destination__info">
+                  <h2 class="destination__info-heading">Moon</h2>
+                  <p class="destination__info-text">
+                    See our planet as you’ve never seen it before. A perfect
+                    relaxing trip away to help regain perspective and come back
+                    refreshed. While you’re there, take in some history by
+                    visiting the Luna 2 and Apollo 11 landing sites.
+                  </p>
+                  <dl class="destination__characteristics">
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Avg. distance
+                      </dt>
+                      <dd class="destination__characteristic-text">
+                        384,400 km
+                      </dd>
+                    </div>
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Est. travel time
+                      </dt>
+                      <dd class="destination__characteristic-text">3 days</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./js/index.min.js"></script>
+  </body>
+</html>
