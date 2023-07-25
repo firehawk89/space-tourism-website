@@ -60,7 +60,12 @@
   }
 
   &__img-container {
+    display: none;
     flex: 1 1 auto;
+
+    &.is-active {
+      display: block;
+    }
 
     img {
       margin-inline: auto;
@@ -105,6 +110,18 @@
     text-transform: uppercase;
     color: $clr-light;
 
+    &.is-active {
+      &::after {
+        opacity: 1;
+      }
+
+      @include hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -120,13 +137,18 @@
 
     @include hover {
       &::after {
-        opacity: 1;
+        opacity: 0.5;
       }
     }
   }
 
   &__info {
+    display: none;
     margin-top: 37px;
+
+    &.is-active {
+      display: block;
+    }
 
     @include media(768) {
       margin-top: 32px;
