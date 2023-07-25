@@ -77,7 +77,7 @@
           <section class="destination">
             <h1 class="destination__heading">Pick your destination</h1>
             <div class="destination__content">
-              <div class="destination__img-container">
+              <div class="destination__img-container is-active">
                 <picture>
                   <source
                     srcset="./img/destination/image-moon.webp"
@@ -86,14 +86,52 @@
                   <img src="./img/destination/image-moon.png" alt="Moon" />
                 </picture>
               </div>
+              <div class="destination__img-container">
+                <picture>
+                  <source
+                    srcset="./img/destination/image-mars.webp"
+                    type="image/webp"
+                  />
+                  <img src="./img/destination/image-mars.png" alt="Mars" />
+                </picture>
+              </div>
+              <div class="destination__img-container">
+                <picture>
+                  <source
+                    srcset="./img/destination/image-europa.webp"
+                    type="image/webp"
+                  />
+                  <img src="./img/destination/image-europa.png" alt="Europa" />
+                </picture>
+              </div>
+              <div class="destination__img-container">
+                <picture>
+                  <source
+                    srcset="./img/destination/image-titan.webp"
+                    type="image/webp"
+                  />
+                  <img src="./img/destination/image-titan.png" alt="Titan" />
+                </picture>
+              </div>
               <div class="destination__text">
                 <ul class="destination__list">
-                  <li class="destination__list-item">Moon</li>
-                  <li class="destination__list-item">Mars</li>
-                  <li class="destination__list-item">Europa</li>
-                  <li class="destination__list-item">Titan</li>
+                  <li
+                    class="destination__list-item is-active"
+                    data-tab-target="#moon"
+                  >
+                    Moon
+                  </li>
+                  <li class="destination__list-item" data-tab-target="#mars">
+                    Mars
+                  </li>
+                  <li class="destination__list-item" data-tab-target="#europa">
+                    Europa
+                  </li>
+                  <li class="destination__list-item" data-tab-target="#titan">
+                    Titan
+                  </li>
                 </ul>
-                <div class="destination__info">
+                <div class="destination__info is-active" id="moon">
                   <h2 class="destination__info-heading">Moon</h2>
                   <p class="destination__info-text">
                     See our planet as you’ve never seen it before. A perfect
@@ -115,6 +153,80 @@
                         Est. travel time
                       </dt>
                       <dd class="destination__characteristic-text">3 days</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="destination__info" id="mars">
+                  <h2 class="destination__info-heading">Mars</h2>
+                  <p class="destination__info-text">
+                    Don’t forget to pack your hiking boots. You’ll need them to
+                    tackle Olympus Mons, the tallest planetary mountain in our
+                    solar system. It’s two and a half times the size of Everest!
+                  </p>
+                  <dl class="destination__characteristics">
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Avg. distance
+                      </dt>
+                      <dd class="destination__characteristic-text">
+                        225 MIL. km
+                      </dd>
+                    </div>
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Est. travel time
+                      </dt>
+                      <dd class="destination__characteristic-text">9 months</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="destination__info" id="europa">
+                  <h2 class="destination__info-heading">Europa</h2>
+                  <p class="destination__info-text">
+                    The smallest of the four Galilean moons orbiting Jupiter,
+                    Europa is a winter lover’s dream. With an icy surface, it’s
+                    perfect for a bit of ice skating, curling, hockey, or simple
+                    relaxation in your snug wintery cabin.
+                  </p>
+                  <dl class="destination__characteristics">
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Avg. distance
+                      </dt>
+                      <dd class="destination__characteristic-text">
+                        628 MIL. km
+                      </dd>
+                    </div>
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Est. travel time
+                      </dt>
+                      <dd class="destination__characteristic-text">3 years</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="destination__info" id="titan">
+                  <h2 class="destination__info-heading">Titan</h2>
+                  <p class="destination__info-text">
+                    The only moon known to have a dense atmosphere other than
+                    Earth, Titan is a home away from home (just a few hundred
+                    degrees colder!). As a bonus, you get striking views of the
+                    Rings of Saturn.
+                  </p>
+                  <dl class="destination__characteristics">
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Avg. distance
+                      </dt>
+                      <dd class="destination__characteristic-text">
+                        1.6 BIL. km
+                      </dd>
+                    </div>
+                    <div class="destination__characteristic">
+                      <dt class="destination__characteristic-heading">
+                        Est. travel time
+                      </dt>
+                      <dd class="destination__characteristic-text">7 years</dd>
                     </div>
                   </dl>
                 </div>
