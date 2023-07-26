@@ -15,29 +15,8 @@
     padding: 24px 0px 57px;
   }
 
-  &__heading {
-    font-family: "Barlow Condensed";
-    font-size: 28px;
-    line-height: normal;
-    letter-spacing: 4.725px;
-    text-transform: uppercase;
-
-    @include media(768) {
-      font-size: 20px;
-      letter-spacing: 3.375px;
-    }
-
-    @include media(640) {
-      text-align: center;
-      font-size: 16px;
-      letter-spacing: 2.7px;
-    }
-
-    &::before {
-      margin-right: 28px;
-      content: "01";
-      opacity: 0.25;
-    }
+  &__heading::before {
+    content: "01";
   }
 
   &__content {
