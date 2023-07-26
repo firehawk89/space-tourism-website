@@ -970,6 +970,16 @@ body.is-locked {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.menu__item.is-active {
+  -webkit-box-shadow: inset 0px -3px 0px 0px white;
+          box-shadow: inset 0px -3px 0px 0px white;
+}
+@media (hover: hover) {
+  .menu__item.is-active:hover {
+    -webkit-box-shadow: inset 0px -3px 0px 0px white;
+            box-shadow: inset 0px -3px 0px 0px white;
+  }
+}
 @media (hover: hover) {
   .menu__item:hover {
     -webkit-box-shadow: inset 0px -3px 0px 0px rgba(255, 255, 255, 0.5);
