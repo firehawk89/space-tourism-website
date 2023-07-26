@@ -40,26 +40,21 @@
     }
   }
 
-  &__text {
+  &__info {
     display: none;
     animation: appear 0.3s ease;
+
+    &.is-active {
+      display: block;
+    }
 
     @include media(1024, min) {
       margin-top: auto;
     }
 
     @include media(1024) {
-      margin-top: 20px;
-    }
-
-    &.is-active {
-      display: block;
-    }
-  }
-
-  &__info {
-    @include media(1024) {
       text-align: center;
+      margin-top: 20px;
     }
 
     @include media(768) {
