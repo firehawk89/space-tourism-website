@@ -1,5 +1,5 @@
 const crewBullets = document.querySelectorAll("[data-bullet-target]");
-const crewContents = document.querySelectorAll(".crew__text");
+const crewContents = document.querySelectorAll(".crew__info");
 const crewImages = document.querySelectorAll(".crew__img-container");
 
 crewBullets.forEach((bullet, index) => {
