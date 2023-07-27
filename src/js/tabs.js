@@ -9,10 +9,12 @@ destinationTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
     const target = document.querySelector(tab.dataset.tabTarget);
 
+    // From utils.js
     resetActiveState(destinationTabs);
     resetActiveState(destinationContents);
     resetActiveState(destinationImages);
 
+    // From utils.js
     setActiveState(tab);
     setActiveState(target);
     setActiveState(destinationImages[index]);
