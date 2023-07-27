@@ -21,10 +21,12 @@
     transition: all 0.3s ease-out;
 
     &.is-active {
-      box-shadow: inset 0px -3px 0px 0px rgba($color: $clr-light, $alpha: 1);
-
-      @include hover {
+      @include media(640, min) {
         box-shadow: inset 0px -3px 0px 0px rgba($color: $clr-light, $alpha: 1);
+
+        @include hover {
+          box-shadow: inset 0px -3px 0px 0px rgba($color: $clr-light, $alpha: 1);
+        }
       }
     }
 
