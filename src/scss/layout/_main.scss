@@ -3,7 +3,7 @@
 .main {
   flex: 1 1 auto;
 
-  @include media(1440, min) {
-    padding-inline: 117px;
+  @include media(1439.98, min) {
+    padding-inline: 110px;
   }
 }
