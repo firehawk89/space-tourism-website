@@ -15,10 +15,12 @@ crewBullets.forEach((bullet, index) => {
   bullet.addEventListener("click", () => {
     const target = document.querySelector(bullet.dataset.crewBulletTarget);
 
+	// From utils.js
     resetActiveState(crewBullets);
     resetActiveState(crewContents);
     resetActiveState(crewImages);
-
+	
+	// From utils.js
     setActiveState(bullet);
     setActiveState(target);
     setActiveState(crewImages[index]);
