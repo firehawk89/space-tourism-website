@@ -53,7 +53,7 @@
             <nav class="header__nav">
               <ul class="header__menu menu">
                 <li class="menu__item">
-                  <a class="menu__link" href="/">Home</a>
+                  <a class="menu__link" href="./">Home</a>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link" href="./destination.html"
@@ -76,71 +76,63 @@
           <section class="crew">
             <h1 class="crew__heading step-heading">Meet your crew</h1>
             <div class="crew__content">
-              <div class="crew__text is-active" id="commander">
-                <div class="crew__info">
-                  <h2 class="crew__info-heading">
-                    <span>Commander</span> Douglas Hurley
-                  </h2>
-                  <p class="crew__info-text">
-                    Douglas Gerald Hurley is an American engineer, former Marine
-                    Corps pilot and former NASA astronaut. He launched into
-                    space for the third time as commander of Crew Dragon Demo-2.
-                  </p>
-                </div>
+              <div class="crew__info is-active" id="commander">
+                <h2 class="crew__info-heading">
+                  <span>Commander</span> Douglas Hurley
+                </h2>
+                <p class="crew__info-text">
+                  Douglas Gerald Hurley is an American engineer, former Marine
+                  Corps pilot and former NASA astronaut. He launched into space
+                  for the third time as commander of Crew Dragon Demo-2.
+                </p>
               </div>
-              <div class="crew__text" id="missionSpecialist">
-                <div class="crew__info">
-                  <h2 class="crew__info-heading">
-                    <span>Mission Specialist</span> Mark Shuttleworth
-                  </h2>
-                  <p class="crew__info-text">
-                    Mark Richard Shuttleworth is the founder and CEO of
-                    Canonical, the company behind the Linux-based Ubuntu
-                    operating system. Shuttleworth became the first South
-                    African to travel to space as a space tourist.
-                  </p>
-                </div>
+              <div class="crew__info" id="missionSpecialist">
+                <h2 class="crew__info-heading">
+                  <span>Mission Specialist</span> Mark Shuttleworth
+                </h2>
+                <p class="crew__info-text">
+                  Mark Richard Shuttleworth is the founder and CEO of Canonical,
+                  the company behind the Linux-based Ubuntu operating system.
+                  Shuttleworth became the first South African to travel to space
+                  as a space tourist.
+                </p>
               </div>
-              <div class="crew__text" id="pilot">
-                <div class="crew__info">
-                  <h2 class="crew__info-heading">
-                    <span>Pilot</span> Victor Glover
-                  </h2>
-                  <p class="crew__info-text">
-                    Pilot on the first operational flight of the SpaceX Crew
-                    Dragon to the International Space Station. Glover is a
-                    commander in the U.S. Navy where he pilots an F/A-18.He was
-                    a crew member of Expedition 64, and served as a station
-                    systems flight engineer.
-                  </p>
-                </div>
+              <div class="crew__info" id="pilot">
+                <h2 class="crew__info-heading">
+                  <span>Pilot</span> Victor Glover
+                </h2>
+                <p class="crew__info-text">
+                  Pilot on the first operational flight of the SpaceX Crew
+                  Dragon to the International Space Station. Glover is a
+                  commander in the U.S. Navy where he pilots an F/A-18.He was a
+                  crew member of Expedition 64, and served as a station systems
+                  flight engineer.
+                </p>
               </div>
-              <div class="crew__text" id="flightEngineer">
-                <div class="crew__info">
-                  <h2 class="crew__info-heading">
-                    <span>Flight Engineer</span> Anousheh Ansari
-                  </h2>
-                  <p class="crew__info-text">
-                    Anousheh Ansari is an Iranian American engineer and
-                    co-founder of Prodea Systems. Ansari was the fourth
-                    self-funded space tourist, the first self-funded woman to
-                    fly to the ISS, and the first Iranian in space.
-                  </p>
-                </div>
+              <div class="crew__info" id="flightEngineer">
+                <h2 class="crew__info-heading">
+                  <span>Flight Engineer</span> Anousheh Ansari
+                </h2>
+                <p class="crew__info-text">
+                  Anousheh Ansari is an Iranian American engineer and co-founder
+                  of Prodea Systems. Ansari was the fourth self-funded space
+                  tourist, the first self-funded woman to fly to the ISS, and
+                  the first Iranian in space.
+                </p>
               </div>
               <ul class="crew__bullets">
                 <li
                   class="crew__bullet is-active"
-                  data-bullet-target="#commander"
+                  data-crew-bullet-target="#commander"
                 ></li>
                 <li
                   class="crew__bullet"
-                  data-bullet-target="#missionSpecialist"
+                  data-crew-bullet-target="#missionSpecialist"
                 ></li>
-                <li class="crew__bullet" data-bullet-target="#pilot"></li>
+                <li class="crew__bullet" data-crew-bullet-target="#pilot"></li>
                 <li
                   class="crew__bullet"
-                  data-bullet-target="#flightEngineer"
+                  data-crew-bullet-target="#flightEngineer"
                 ></li>
               </ul>
               <div class="crew__img-container is-active">
