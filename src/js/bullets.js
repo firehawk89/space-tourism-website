@@ -10,6 +10,7 @@ const technologyImages = document.querySelectorAll(
   ".technology__img-container"
 );
 
+// Technology page bullets
 crewBullets.forEach((bullet, index) => {
   bullet.addEventListener("click", () => {
     const target = document.querySelector(bullet.dataset.crewBulletTarget);

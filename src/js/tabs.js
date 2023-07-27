@@ -4,6 +4,7 @@ const destinationImages = document.querySelectorAll(
   ".destination__img-container"
 );
 
+// Destination page tabs
 destinationTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
     const target = document.querySelector(tab.dataset.tabTarget);
